@@ -18,11 +18,17 @@ html {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
 
 section {
     width: 100%;
     height: 100%;
+}
+
+.image-bubble {
+    width: 100%;
+    border-radius: 15rem;
 }

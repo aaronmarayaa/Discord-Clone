@@ -10,15 +10,17 @@
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <link rel="stylesheet" href="assets/css/login.css">
+
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
-        <section class="login">
+        <section class="login" id="login">
             <nav>
                 <img src="assets/images/discord-title.svg" alt="">
             </nav>
             <div class="login-page">
                 <div class="login-card">
-                    <form action="">
+                    <form onsubmit="return activeHomeMain(event)">
                         <div class="title">
                             <h3>Welcome Back!</h3>
                             <p>We're so excited to see you again!</p>
@@ -29,7 +31,7 @@
                         </div>
                         <div class="box">
                             <label for="passowrd">PASSWORD</label>
-                            <input type="password" name="" id="passowrd">
+                            <input type="password" name="" id="password">
                         </div>
                         <a href="">Forgot password?</a>
                         <input type="submit" value="Login" class="login-btn">
@@ -44,16 +46,245 @@
                 </div>
             </div>
         </section>
-        <main>
-            <article class="navigation">
 
+        <main class="home-main" id="home-main">
+            <article class="navigation">
+                <div class="logo">
+                    <img src="assets/images/favicon.ico" alt="" class="image-bubble">
+                </div>
+                <div class="conversation-icon">
+                    <img src="assets/images/easyaspy.jpg" alt="" title="Easy as Py" class="image-bubble">
+                </div>
+                <div class="conversation-icon">
+                    <img src="assets/images/amigoscode.webp" alt="" title="Amigos Code" class="image-bubble">
+                </div>
+                <div class="conversation-icon">
+                    <img src="assets/images/kape.jpg" alt="" title="Kape" class="image-bubble">
+                </div>
+                <div class="conversation-icon">
+                    <img src="assets/images/icreatechscommunity.webp" alt="" title="icreatechs Community" class="image-bubble">
+                </div>
+                <div class="conversation-icon">
+                    <img src="assets/images/academicph.jpg" alt="" title="Academicph" class="image-bubble">
+                </div>
+                <div class="conversation-icon">
+                    <img src="assets/images/midjourney.webp" alt="" title="Midjourney" class="image-bubble">
+                </div>
+                <div class="addon">
+                    <img src="assets/images/plusgreen.png" alt="" title="Add Server" >
+                </div>
+                <div class="addon">
+                    <img src="assets/images/downloads2.png" alt="" title="Download Apps" >
+                </div>
+                <div class="addon">
+                    <img src="assets/images/compass-circular-tool.png" alt="" title="Discover" >
+                </div>
             </article>
             <article class="conversations">
+                <div class="find"><p>
+                    Find of start a converstation
+                </p></div>
+                <div class="list">
+                    <div class="item">
+                        <img src="assets/images/friends.png" alt="">
+                        <p>Friends</p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/social-media.png" alt="">
+                        <p>Nitro</p>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/store.png" alt="">
+                        <p>Shop</p>
+                    </div>
+                </div>
 
+                <div class="direct-messages">
+                    <p>DIRECT MESSAGES</p>
+                    <div class="item">
+                        <div class="image"><img src="assets/images/favicon.ico" alt="" class="image-bubble"></div>
+                        <p>Discord</p>
+                    </div>
+                    <div class="item active" onclick="showProfile1()" id="nicko">
+                        <div class="image"><img src="assets/images/friends.webp" alt="" class="image-bubble"></div>
+                        <p>Nicko Valmonte</p>
+                    </div>
+                    <div class="item" onclick="showProfile2()" id="kenneth">
+                        <div class="image"><img src="assets/images/discord.png" alt="" class="image-bubble"></div>
+                        <p>John Kenneth Caparas</p>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-profile" onclick="logoutAccount()">
+                        <div class="image">
+                            <img src="assets/images/profile-icon.jpg" alt="" class="image-bubble">
+                        </div>
+                        <div>
+                            <h4>Rea Jean</h4>
+                            <p>online</p>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <img src="assets/images/mic-off.png" alt="" title="Turn on Microphone">
+                        <img src="assets/images/headphones.png" alt="" title="Deafen">
+                        <img src="assets/images/settings.png" alt="" title="Setting">
+                    </div>
+                </div>
             </article>
-            <article class="main">
+            <article class="message-display profile1" id="profile1">
+                <nav>
+                    <div class="name">
+                        <img src="assets/images/friends.webp" alt="">
+                        <h4>Nicko Valmonte</h4>
+                    </div>
+                    <div class="navoptions">
+                        <div><img src="assets/images/phone-call.png" alt=""></div>
+                        <div><img src="assets/images/video.png" alt=""></div>
+                        <div><img src="assets/images/pin.png" alt=""></div>
+                        <input type="text" placeholder="search">
+                        <div><img src="assets/images/inbox.png" alt=""></div>
+                        <div><img src="assets/images/circle-help.png" alt=""></div>
+                    </div>
+                </nav>
+                <div class="send-message">
+                    <section class="messages">
+                        <div class="message-body">
+                            <div class="message-content">
+                                <div class="sender-profile">
+                                    <img src="assets/images/profile-2.webp" alt="" class="image-bubble">
+                                </div>
+                                <h1>Nicko Valmonte</h1>
+                                <h3>nicko</h3>
+                                <p>This is the beginning of your direct message history with <strong>Nicko Valmonte</strong> </p>
+                                <div class="mutual-server">
+                                    <div class="image">
+                                        <img src="assets/images/easyaspy.jpg" alt="" class="image-bubble">
+                                    </div>
+                                    <p>1 Mutal Server</p>
+                                </div>
+                                <hr>
+                                <div class="message" id="message1">
+                                    <div class="sender">
+                                        <div class="image">
+                                            <img src="assets/images/profile-1.webp" alt="" class="image-bubble">
+                                        </div>
+                                        <h4>reajean</h4>
+                                        <p>December 9, 2024</p>
+                                    </div>
+                                    <img src="assets/images/wave.gif" alt="">
+                                </div>
+                            </div>
+                            <div class="message-box">
+                                <img src="assets/images/plus.png" alt="">
+                                <input type="text" id="message-input1" placeholder="Send Message to @Nicko Valmonte">
+                                <div class="message-menu">
+                                    <div><img src="assets/images/send2.png" alt="" onclick="addParagraph1()"></div>
+                                    <div><img src="assets/images/gift-box-with-a-bow.png" alt=""></div>
+                                    <div><img src="assets/images/gif.png" alt=""></div>
+                                    <div><img src="assets/images/sheet.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="sender-details">
+                        <div class="details">
+                            <div class="image">
+                                <img src="assets/images/profile-2.webp" alt="" class="image-bubble">
+                            </div>
+                            <h1>Nicko Valmonte</h1>
+                            <p>nicko <img src="assets/images/id.png" alt=""></p>
 
+                            <div class="card">
+                                <h4>About me</h4>
+                                <p>A BSIT student.</p><br>
+                                <h3>Member since:</h3>
+                                <p>November 27, 2022</p>
+                            </div>
+                            <div class="card">
+                                <p>Mutual Servers - 1</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+            <article class="message-display profile2" id="profile2">
+                <nav>
+                    <div class="name">
+                        <img src="assets/images/discord.png" alt="">
+                        <h4>John Kenneth Caparas</h4>
+                    </div>
+                    <div class="navoptions">
+                        <div><img src="assets/images/phone-call.png" alt=""></div>
+                        <div><img src="assets/images/video.png" alt=""></div>
+                        <div><img src="assets/images/pin.png" alt=""></div>
+                        <input type="text" placeholder="search">
+                        <div><img src="assets/images/inbox.png" alt=""></div>
+                        <div><img src="assets/images/circle-help.png" alt=""></div>
+                    </div>
+                </nav>
+                <div class="send-message">
+                    <section class="messages">
+                        <div class="message-body">
+                            <div class="message-content">
+                                <div class="sender-profile">
+                                    <img src="assets/images/discord.png" alt="" class="image-bubble">
+                                </div>
+                                <h1>John Kenneth Caparas</h1>
+                                <h3>kenneth</h3>
+                                <p>This is the beginning of your direct message history with <strong>John Kenneth Caparas</strong> </p>
+                                <div class="mutual-server">
+                                    <div class="image">
+                                        <img src="assets/images/midjourney.webp" alt="" class="image-bubble">
+                                    </div>
+                                    <p>1 Mutal Server</p>
+                                </div>
+                                <hr>
+                                <div class="message" id="message2">
+                                    <div class="sender">
+                                        <div class="image">
+                                            <img src="assets/images/profile-1.webp" alt="" class="image-bubble">
+                                        </div>
+                                        <h4>reajean</h4>
+                                        <p>December 9, 2024</p>
+                                    </div>
+                                    <img src="assets/images/Hungry.gif" alt="">
+                                </div>
+                            </div>
+                            <div class="message-box">
+                                <img src="assets/images/plus.png" alt="">
+                                <input type="text" id="message-input2" placeholder="Send Message to @Nicko Valmonte">
+                                <div class="message-menu">
+                                    <div><img src="assets/images/send2.png" alt="" onclick="addParagraph2()"></div>
+                                    <div><img src="assets/images/gift-box-with-a-bow.png" alt=""></div>
+                                    <div><img src="assets/images/gif.png" alt=""></div>
+                                    <div><img src="assets/images/sheet.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="sender-details">
+                        <div class="details">
+                            <div class="image">
+                                <img src="assets/images/discord.png" alt="" class="image-bubble">
+                            </div>
+                            <h1>John Kenneth Caparas</h1>
+                            <p>Kenneth <img src="assets/images/id.png" alt=""></p>
+
+                            <div class="card">
+                                <h4>About me</h4>
+                                <p>A BSIT student.</p><br>
+                                <h3>Member since:</h3>
+                                <p>November 27, 2022</p>
+                            </div>
+                            <div class="card">
+                                <p>Mutual Servers - 1</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </article>
         </main>
     </body>
+    <script src="assets/js/script.js"></script>
 </html>
